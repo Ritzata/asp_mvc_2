@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+
 namespace asp_mvc_2.Controllers
 {
     public class HomeController : Controller
@@ -9,6 +10,13 @@ namespace asp_mvc_2.Controllers
         }
         [Authorize]
         public ActionResult Welcome()
+        {
+            return View();
+        }
+        public ActionResult AdminOnly() {
+            return View();
+        }
+        public ActionResult UnAuthorized()
         {
             return View();
         }
